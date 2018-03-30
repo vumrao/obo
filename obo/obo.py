@@ -426,7 +426,7 @@ class OboObject:
         headers['x-amz-copy-source'] = src_str
         headers['x-amz-metadata-directive'] = 'REPLACE'
 
-        for (h, v) in k.metadata:
+        for (h, v) in k.metadata.items():
             headers[h] = v;
 
         if k.content_type:
